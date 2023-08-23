@@ -2,15 +2,15 @@ import "./AddProductForm";
 import React, { useState ,useEffect} from "react";
 import {Field} from "formik";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import"../../node_modules/bootstrap/dist/js/bootstrap";
+import"bootstrap";
 import axios from "axios";
 
-export function AddProductForm()
+export function AddFertilizerForm()
 {
     let [product, setProduct]=useState({
         productName:"", 
         chemicalName:"", 
-        category:"Insecticide", 
+        category:"Fertilizer", 
         companyName:"",
         weight:"",
         price:"",
@@ -50,10 +50,6 @@ export function AddProductForm()
     }
     let changeBenefits=(e)=>{
         let newFname={...product, benefits:e.target.value};
-        setProduct(newFname);
-    }
-    let changeTargetedInsects=(e)=>{
-        let newFname={...product, targetedInsects:e.target.value};
         setProduct(newFname);
     }
     let changeWeight=(e)=>{
@@ -97,11 +93,10 @@ export function AddProductForm()
             }
             })
 
-
         let newuser = {
             productName:"", 
             chemicalName:"", 
-            category:"Insecticide", 
+            category:"Fertilizer", 
             companyName:"",
             weight:"",
             price:"",
@@ -127,7 +122,7 @@ export function AddProductForm()
                                     
                                         <div className="row">
                                             <div className="col-sm-12">
-                                                <p id="h2feat">Add Pesticide</p>
+                                                <p id="h2feat">Add Fertilizer</p>
                                             </div>
                                         </div>
 
@@ -139,7 +134,7 @@ export function AddProductForm()
                                                     </label>
                                                     <input
                                                     type="text"
-                                                    placeholder="eg. Fame"
+                                                    placeholder="eg. 10:26:26"
                                                     required
                                                     id="productName"
                                                     value={product.productName}
@@ -156,7 +151,7 @@ export function AddProductForm()
                                                     </label>
                                                     <input
                                                     type="text"
-                                                    placeholder="eg. Bayer"
+                                                    placeholder="eg. Mahadhan"
                                                     id="companyName"
                                                     value={product.companyName}
                                                     onChange={changeCompanyName}
@@ -175,7 +170,7 @@ export function AddProductForm()
                                                     </label>
                                                     <input
                                                     type="text"
-                                                    placeholder="eg. Fludendamide 50% SC"
+                                                    placeholder="eg. N-10, P-26 K-26"
                                                     id="chemicalName"
                                                     value={product.chemicalName}
                                                     onChange={changeChemicalName}
@@ -191,7 +186,6 @@ export function AddProductForm()
                                                     </label>
                                                     <input
                                                         type="text"
-                                                        placeholder="eg. Fludendamide 50% SC"
                                                         id="category"
                                                         value={product.category}
                                                         className="form-control form-control-lg"
@@ -208,7 +202,7 @@ export function AddProductForm()
                                                     </label>
                                                     <input
                                                         type="text"
-                                                        placeholder="in gram (gm)"
+                                                        placeholder="In Kg"
                                                         id="weight"
                                                         value={product.weight}
                                                         onChange={changeWeight}
@@ -313,22 +307,6 @@ export function AddProductForm()
                                                 id="benefits"
                                                 value={product.benefits}
                                                 onChange={changeBenefits}
-                                                rows="2" 
-                                                cols="50"
-                                            >
-                                                This is the initial text in the textarea.
-                                            </textarea> 
-                                        </div>
-                                        <div className="form-outline mb-4">
-                                            <label htmlFor="targetedInsects" className="form-label fw-bolder" >
-                                            Targeted Insects
-                                            </label>
-                                            <textarea 
-                                                className="form-control form-control-lg" 
-                                                placeholder="Enter Benefits"
-                                                id="targetedInsects"
-                                                value={product.targetedInsects}
-                                                onChange={changeTargetedInsects}
                                                 rows="2" 
                                                 cols="50"
                                             >

@@ -2,15 +2,15 @@ import "./AddProductForm";
 import React, { useState ,useEffect} from "react";
 import {Field} from "formik";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import"../../node_modules/bootstrap/dist/js/bootstrap";
+import"bootstrap";
 import axios from "axios";
 
-export function AddProductForm()
+export function AddSeedForm()
 {
     let [product, setProduct]=useState({
         productName:"", 
         chemicalName:"", 
-        category:"Insecticide", 
+        category:"Seed", 
         companyName:"",
         weight:"",
         price:"",
@@ -50,10 +50,6 @@ export function AddProductForm()
     }
     let changeBenefits=(e)=>{
         let newFname={...product, benefits:e.target.value};
-        setProduct(newFname);
-    }
-    let changeTargetedInsects=(e)=>{
-        let newFname={...product, targetedInsects:e.target.value};
         setProduct(newFname);
     }
     let changeWeight=(e)=>{
@@ -97,11 +93,12 @@ export function AddProductForm()
             }
             })
 
+        
 
         let newuser = {
             productName:"", 
             chemicalName:"", 
-            category:"Insecticide", 
+            category:"Seed", 
             companyName:"",
             weight:"",
             price:"",
@@ -127,7 +124,7 @@ export function AddProductForm()
                                     
                                         <div className="row">
                                             <div className="col-sm-12">
-                                                <p id="h2feat">Add Pesticide</p>
+                                                <p id="h2feat">Add Seeds</p>
                                             </div>
                                         </div>
 
@@ -135,16 +132,16 @@ export function AddProductForm()
                                             <div className="col-md-6 mb-4">
                                                 <div className="form-outline">
                                                     <label htmlFor="productName" className="form-label fw-bolder" >
-                                                    Product Name
+                                                        Product Name
                                                     </label>
                                                     <input
-                                                    type="text"
-                                                    placeholder="eg. Fame"
-                                                    required
-                                                    id="productName"
-                                                    value={product.productName}
-                                                    onChange={changeProductName}
-                                                    className="form-control form-control-lg"
+                                                        type="text"
+                                                        placeholder="eg. Moneymaker Bg-2"
+                                                        required
+                                                        id="productName"
+                                                        value={product.productName}
+                                                        onChange={changeProductName}
+                                                        className="form-control form-control-lg"
                                                     />
                                                     
                                                 </div>
@@ -152,15 +149,15 @@ export function AddProductForm()
                                             <div className="col-md-6 mb-4">
                                                 <div className="form-outline">
                                                     <label htmlFor="companyName" className="form-label fw-bolder" >
-                                                    Company Name
+                                                        Company Name
                                                     </label>
                                                     <input
-                                                    type="text"
-                                                    placeholder="eg. Bayer"
-                                                    id="companyName"
-                                                    value={product.companyName}
-                                                    onChange={changeCompanyName}
-                                                    className="form-control form-control-lg"
+                                                        type="text"
+                                                        placeholder="eg. Ankur"
+                                                        id="companyName"
+                                                        value={product.companyName}
+                                                        onChange={changeCompanyName}
+                                                        className="form-control form-control-lg"
                                                     />
                                                     
                                                 </div>
@@ -170,39 +167,7 @@ export function AddProductForm()
                                         <div className="row">
                                             <div className="col-md-6 mb-4">
                                                 <div className="form-outline">
-                                                <label htmlFor="chemicalName" className="form-label fw-bolder">
-                                                    Chemical Name
-                                                    </label>
-                                                    <input
-                                                    type="text"
-                                                    placeholder="eg. Fludendamide 50% SC"
-                                                    id="chemicalName"
-                                                    value={product.chemicalName}
-                                                    onChange={changeChemicalName}
-                                                    className="form-control form-control-lg"
-                                                    />
-                                                    
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 mb-4">
-                                                <div className="form-outline">
-                                                    <label htmlFor="category" className="form-label fw-bolder">
-                                                        Category
-                                                    </label>
-                                                    <input
-                                                        type="text"
-                                                        placeholder="eg. Fludendamide 50% SC"
-                                                        id="category"
-                                                        value={product.category}
-                                                        className="form-control form-control-lg"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-md-6 mb-4">
-                                                <div className="form-outline">
-                                        
+                                            
                                                     <label htmlFor="weight" className="form-label fw-bolder">
                                                         Weight
                                                     </label>
@@ -215,6 +180,36 @@ export function AddProductForm()
                                                         className="form-control form-control-lg"
                                                     />
                                                     
+                                                </div>
+                                            </div>
+                                            <div className="col-md-6 mb-4">
+                                                <div className="form-outline">
+                                                    <label htmlFor="category" className="form-label fw-bolder">
+                                                        Category
+                                                    </label>
+                                                    <input
+                                                        type="text"
+                                                        id="category"
+                                                        value={product.category}
+                                                        className="form-control form-control-lg"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-md-6 mb-4">
+                                                <div className="form-outline">
+                                                    <label htmlFor="quantity" className="form-label fw-bolder" >
+                                                        Quantity
+                                                    </label>
+                                                    <input
+                                                        type="text"
+                                                        id="quantity"
+                                                        placeholder="eg. 50"
+                                                        value={product.quantity}
+                                                        onChange={changeQuantity}
+                                                        className="form-control form-control-lg"
+                                                    />
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-4">
@@ -250,20 +245,7 @@ export function AddProductForm()
                                                     
                                                 </div>
                                             </div>
-                                            <div className="col-md-6 mb-4">
-                                                <div className="form-outline">
-                                                    <label htmlFor="quantity" className="form-label fw-bolder" >
-                                                    Quantity
-                                                    </label>
-                                                    <input
-                                                    type="text"
-                                                    id="quantity"
-                                                    value={product.quantity}
-                                                    onChange={changeQuantity}
-                                                    className="form-control form-control-lg"
-                                                    />
-                                                </div>
-                                            </div>
+                                            
                                         </div>
 
 
@@ -319,22 +301,8 @@ export function AddProductForm()
                                                 This is the initial text in the textarea.
                                             </textarea> 
                                         </div>
-                                        <div className="form-outline mb-4">
-                                            <label htmlFor="targetedInsects" className="form-label fw-bolder" >
-                                            Targeted Insects
-                                            </label>
-                                            <textarea 
-                                                className="form-control form-control-lg" 
-                                                placeholder="Enter Benefits"
-                                                id="targetedInsects"
-                                                value={product.targetedInsects}
-                                                onChange={changeTargetedInsects}
-                                                rows="2" 
-                                                cols="50"
-                                            >
-                                                This is the initial text in the textarea.
-                                            </textarea> 
-                                        </div>
+
+
                                         <div className="form-outline mb-4 my-3">
                                             <form enctype="multipart/form-data">
                                                 <label className="form-label fw-bolder" >

@@ -1,0 +1,19 @@
+/* Add border to all table rows */
+table tr th{
+    border: 1px solid #000;
+    justify-content: center; /* You can change the color and border-width as needed */
+}
+
+/* Add border to all table cells (columns) */
+table td {
+    border: 1px solid #000; /* You can change the color and border-width as needed */
+}
+td {
+    text-align: center;
+}
+/* Optional: Add spacing between cells for better visibility */
+table {
+    background-color: rgb(56, 240, 93);
+    border-collapse: collapse;
+    width: 100%; /* Optional: Set the table width as needed */
+}

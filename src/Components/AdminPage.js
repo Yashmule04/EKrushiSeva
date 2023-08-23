@@ -1,8 +1,8 @@
-import "./RHomePage.css";
+import "./AdminPage.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-export default function RetailerHomePage() {
+export default function AdminPage() {
 
     return(
         <>
@@ -43,7 +43,7 @@ export default function RetailerHomePage() {
                 <div className="row justify-content-center">
                     <div className="col-sm-12 col-md-12">
                         <div className="row justify-content-center">
-                            <div className="col-sm-6 col-md-4">
+                            <div className="col-sm-12 col-md-4">
                                 <Card style={{ width: "16rem" }}>
                                 <img
                                     src="/AddProducts.jpeg"
@@ -51,66 +51,14 @@ export default function RetailerHomePage() {
                                     width={200} // Adjust the value to change the width
                                 />
                                 <Card.Body>
-                                    <Card.Title>Add Pesticide</Card.Title>
+                                    <Card.Title>Approve Retailer</Card.Title>
                                     <Button variant="primary">
                                     Click Here
                                     </Button>
                                 </Card.Body>
                                 </Card>
                             </div>
-                            <div className="col-sm-6 col-md-4">
-                                <Card style={{ width: "16rem" }}>
-                                <img
-                                    src="/seed2.jpg"
-                                    
-                                    className="card-img-top imgCard"
-                                    width={200} // Adjust the value to change the width
-                                />
-                                <Card.Body>
-                                    <Card.Title>Add Fertilizer</Card.Title>
-                                    <Button variant="primary" >
-                                    Click Here
-                                    </Button>
-                                </Card.Body>
-                                </Card>
-                            </div>
-                            <div className="col-sm-6 col-md-4">
-                                <Card style={{ width: "16rem" }}>
-                                <img
-                                    src="/seed3.jpg"
-                                    
-                                    className="card-img-top imgCard"
-                                    width={200} // Adjust the value to change the width
-                                />
-                                <Card.Body>
-                                    <Card.Title>Add Seed</Card.Title>
-                                    <Button variant="primary" >
-                                    Click Here
-                                    </Button>
-                                </Card.Body>
-                                </Card>
-                            </div>
-                        
-                        </div>
-
-
-                        <div className="row justify-content-center">
-                            <div className="col-sm-6 col-md-4">
-                                <Card style={{ width: "16rem" }}>
-                                <img
-                                    src="/AddProducts.jpeg"
-                                    className="card-img-top imgCard"
-                                    width={200} // Adjust the value to change the width
-                                />
-                                <Card.Body>
-                                    <Card.Title>Check Order</Card.Title>
-                                    <Button variant="primary">
-                                    Click Here
-                                    </Button>
-                                </Card.Body>
-                                </Card>
-                            </div>
-                            <div className="col-sm-6 col-md-4">
+                            <div className="col-sm-12 col-md-4">
                                 <Card style={{ width: "16rem" }}>
                                 <img
                                     src="/seed2.jpg"
@@ -126,7 +74,7 @@ export default function RetailerHomePage() {
                                 </Card.Body>
                                 </Card>
                             </div>
-                            <div className="col-sm-6 col-md-4">
+                            <div className="col-sm-12 col-md-4">
                                 <Card style={{ width: "16rem" }}>
                                 <img
                                     src="/seed3.jpg"
@@ -135,7 +83,59 @@ export default function RetailerHomePage() {
                                     width={200} // Adjust the value to change the width
                                 />
                                 <Card.Body>
-                                    <Card.Title>Sales</Card.Title>
+                                    <Card.Title>Total Sale</Card.Title>
+                                    <Button variant="primary" >
+                                    Click Here
+                                    </Button>
+                                </Card.Body>
+                                </Card>
+                            </div>
+                        
+                        </div>
+
+
+                        <div className="row justify-content-center">
+                            <div className="col-sm-12 col-md-4">
+                                <Card style={{ width: "16rem" }}>
+                                <img
+                                    src="/AddProducts.jpeg"
+                                    className="card-img-top imgCard"
+                                    width={200} // Adjust the value to change the width
+                                />
+                                <Card.Body>
+                                    <Card.Title>Check Order</Card.Title>
+                                    <Button variant="primary">
+                                    Click Here
+                                    </Button>
+                                </Card.Body>
+                                </Card>
+                            </div>
+                            <div className="col-sm-12 col-md-4">
+                                <Card style={{ width: "16rem" }}>
+                                <img
+                                    src="/seed2.jpg"
+                                    
+                                    className="card-img-top imgCard"
+                                    width={200} // Adjust the value to change the width
+                                />
+                                <Card.Body>
+                                    <Card.Title>Consumer</Card.Title>
+                                    <Button variant="primary" >
+                                    Click Here
+                                    </Button>
+                                </Card.Body>
+                                </Card>
+                            </div>
+                            <div className="col-sm-12 col-md-4">
+                                <Card style={{ width: "16rem" }}>
+                                <img
+                                    src="/seed3.jpg"
+                                    
+                                    className="card-img-top imgCard"
+                                    width={200} // Adjust the value to change the width
+                                />
+                                <Card.Body>
+                                    <Card.Title>Stock</Card.Title>
                                     <Button variant="primary" >
                                     Click Here
                                     </Button>
